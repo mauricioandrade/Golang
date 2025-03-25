@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+)
 
 func main() {
 
@@ -21,18 +24,28 @@ func main() {
 
 	
 	fmt.Println(printaDiasUteis())
+	fmt.Println(dividirValores())
 
-
+	//scanner go
+	var nome string
+	var idade int
+	var altura float64
+	fmt.Scan(&nome)
+	fmt.Scan(&idade)
+	fmt.Scan(&altura)
+	fmt.Printf(nome, idade, altura)
 }
 
-//função começando com letra minuscula:
+// função começando com letra minuscula:
 // FUNÇÃO É PRIVADA 
 // ELA SÓ PODE SER UTILIZADA NO PACOTE MAIN ex printaNome
 
-//função começando com letra maiscula:
+// função começando com letra maiscula:
 // FUNÇÃO É PUBLICA
 // PODE SER CHAMADA EM OUTRO PACOTE ex PrintaNome
 // como utilizar ela fora do pacote, ex main.PrintaNome(nome)
+
+
 
 func printaNome(nome, sobrenome string) (string, string) {
 	return nome, sobrenome
@@ -42,6 +55,12 @@ func printaDiasUteis() string {
 	diasUteis := "Segunda, Terça, Quarta, Quinta, Sexta"
 	return diasUteis
 }
+
+func dividirValores() int{
+	dividir := 100/25 
+	return dividir
+}
+
 
 func soma(x int, y int) int {
 	return x + y
